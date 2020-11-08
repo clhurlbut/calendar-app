@@ -4,11 +4,37 @@ let currentDate = moment().format('LLLL');
 let currentHour = moment().format("H");
 let fullSchedule = $(".schedule-container");
 let timeBlock = $(".time-block");
+let workTasks = [];
 
+// function to get an array of the hour and task 
+function getTaskArray() {
+    timeBlock.each(function() {
+        let thisRow = $(this);
+        let thisHour = parseInt(thisRow.attr("data-hour"));
 
-// display the current date to the header
-currentDay.text(currentDate);
+        let tasksObject = {
+            text: "",
+            hour: thisHour,
+        }
+        workTasks.push(tasksObject);
+    });
+    localStorage.setItem("tasks", JSON.stringify(workTasks));
+};
 
+// function to save so I can call it for onclick in the document.ready
+function saveTasks() {
+    let hourSave = $(this).parent().attr("data-hour");
+    let workTaskSave = (($(this).parent()).children("textarea")).val();
+    //loop to go through the rows
+    for (var i = 0; i < workTasks.length; i++){
+        if (workTasks[i].hour = hourSave) {
+            
+            workTasks[i].text == workTaskSave;
+        }
+    }
+    localStorage.setItem("tasks", JSON.stringify(workTasks));
+    getSchedule();
+};
 
 // make the rows responsive to time with the different
 //color classes
@@ -16,37 +42,43 @@ currentDay.text(currentDate);
 function colorSchedule() {
     timeBlock.each(function () {
         let thisRow = $(this);
-        let thisRowHour = parseInt(thisRow.attr("data-hour"));
-        if (thisRowHour == currentHour) {
+        let thisHour = parseInt(thisRow.attr("data-hour"));
+        if (thisHour == currentHour) {
             thisRow.addClass("present").removeClass("past future");
         }
-        if (thisRowHour > currentHour) {
+        if (thisHour > currentHour) {
             thisRow.addClass("future").removeClass("past present");
         }
-        if (thisRowHour < currentHour) {
+        if (thisHour < currentHour) {
             thisRow.addClass("past").removeClass("present future");
         }
-   });
+    });
 }
 
-// create an array of task objects in each row and set to local storage
+// function to pull up the schedule objects from localstorage 
+function getSchedule() {
+    workTasks = localStorage.getItem("tasks");
+    workTasks = JSON.parse(workTasks);
 
+    for (var i = 0; i < workTasks.length; i++) {
+        let getHour = workTasks[i].hour;
+        let getTask = workTasks[i].text;
+        
+        $("[data-hour=" + getHour + "]").children("textarea").val(getTask);
+  }
+}
 
-// function to pull the array from localstorage and display
-
-// function to bring up the array if there is no data in localstorage 
-
-// start the application
-
+// in here to start manipulations once DOM is ready 
 $(document).ready(function(){
     colorSchedule();
+    if(!localStorage.getItem("tasks")){
+        getTaskArray();
+        }
+    // display the current date to the header
+    currentDay.text(currentDate);
+    //function for changing the color in accordance to time 
+    getSchedule();
     // function to call saveBtn to save to localstorage 
-    $(".saveBtn").on("click", function(){
-        workTask = $(this).siblings(".description").val().trim();
-        console.log(workTask);
-        taskHour = $(this).parent().attr("data-hour");
-        console.log(taskHour);
-        localStorage.setItem(taskHour, JSON.stringify(workTask));
-    })
+    fullSchedule.on("click", "button", saveTasks);
 });
 
