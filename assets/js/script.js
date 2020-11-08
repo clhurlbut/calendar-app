@@ -4,7 +4,6 @@ let currentDate = moment().format('LLLL');
 let currentHour = moment().format("H");
 let fullSchedule = $(".schedule-container");
 let timeBlock = $(".time-block");
-let scheduleToDo = [];
 
 
 // display the current date to the header
