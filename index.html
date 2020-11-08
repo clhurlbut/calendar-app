@@ -18,110 +18,143 @@
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
+    <button type="button" class="btn btn-success btn-lg justify-content-center clearBtn">Clear Day!</button>
   </header>
-  <div class="container">
-    <div class="row">
+  <div class="container schedule-container">
+    <div class="row time-block" data-hour="8">
       <div class="col-2 col-lg-1 hour">8 AM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
         </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="9">
       <div class="col-2 col-lg-1 hour">9 AM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
           </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="10">
       <div class="col-2 col-lg-1 hour">10 AM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
             </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="11">
       <div class="col-2 col-lg-1 hour">11 AM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
               </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="12">
       <div class="col-2 col-lg-1 hour">12 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                 </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="13">
       <div class="col-2 col-lg-1 hour">1 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                   </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="14">
       <div class="col-2 col-lg-1 hour">2 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                     </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="15">
       <div class="col-2 col-lg-1 hour">3 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                       </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="16">
       <div class="col-2 col-lg-1 hour">4 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                         </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="17">
       <div class="col-2 col-lg-1 hour">5 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
                           </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="18">
       <div class="col-2 col-lg-1 hour">6 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
       </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="19">
       <div class="col-2 col-lg-1 hour">7 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
         </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
-    <div class="row">
+    <div class="row time-block" data-hour="20">
       <div class="col-2 col-lg-1 hour">8 PM</div>
-      <textarea class="col-8 col-lg-10">
+      <textarea class="col-8 col-lg-10 description">
           </textarea>
       <button type="button"
-        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-lock saveBtn">
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
+      </button>
+    </div>
+    <div class="row time-block" data-hour="21">
+      <div class="col-2 col-lg-1 hour">9 PM</div>
+      <textarea class="col-8 col-lg-10 description">
+          </textarea>
+      <button type="button"
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
+      </button>
+    </div>
+    <div class="row time-block" data-hour="22">
+      <div class="col-2 col-lg-1 hour">10 PM</div>
+      <textarea class="col-8 col-lg-10 description">
+          </textarea>
+      <button type="button"
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
+      </button>
+    </div>
+    <div class="row time-block" data-hour="23">
+      <div class="col-2 col-lg-1 hour">11 PM</div>
+      <textarea class="col-8 col-lg-10 description">
+          </textarea>
+      <button type="button"
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
+      </button>
+    </div>
+    <div class="row time-block" data-hour="24">
+      <div class="col-2 col-lg-1 hour">12 AM</div>
+      <textarea class="col-8 col-lg-10 description">
+          </textarea>
+      <button type="button"
+        class="col-2 col-lg-1 btn btn-block d-flex justify-content-center align-items-center fas fa-save saveBtn">
       </button>
     </div>
 
@@ -129,6 +162,9 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <footer>&copy; Cassandra Hurlbut 2020 for UCLA Coding Bootcamp
+  </footer>
 </body>
 
 </html>
