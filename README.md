@@ -25,14 +25,16 @@ Github Repository URL : https://github.com/clhurlbut/calendar-app/
 
 ## Screenshot
 
-![Screenshot of Deployed Gitpage]()
-![Screenshot of Deployed Gitpage]()
-![Screenshot of Deployed Gitpage]()
+![Screenshot of Deployed Gitpage](./assets/imgs/screenshotofApp.png)
+![Screenshot of Deployed Gitpage](./assets/imgs/screenshotofApp2.png)
 
 ## References 
 
 * https://www.w3schools.com/js/
 * https://developer.mozilla.org/en-US/docs/Web/API/
+* https://momentjs.com/
+* https://jqueryui.com/
+* https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 
 ## Contribution
