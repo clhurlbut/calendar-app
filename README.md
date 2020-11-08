@@ -14,6 +14,7 @@ SO THAT I can manage my time effectively
 * CSS
 * Javascript 
 * JQuery
+* Moment.js
 * Bootstrap
 
 ## Website
