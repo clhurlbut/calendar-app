@@ -9,19 +9,19 @@ let scheduleToDo = [];
 // display the current date to the header
 currentDay.text(currentDate);
 
-// create an array of the task objects in each row 
-function startSchedule(){
-    timeBlock.each(function(){
-        let thisRow = $(this)
+// create an array of task objects in each row 
 
-        let taskObjects = {
-            text: ""
-        }
-        scheduleToDo.push(taskObjects);
-    });
-    localStorage.setItem("eventTasks", JSON.stringify(scheduleToDo));
-};
+// create a loop to save to local storage 
 
-// create a loop to save all the rows to local storage 
+// save to localstorage when the saveBtn is clicked 
+
+// make the rows responsive to time with the different
+//color classes
+
+// function to pull the array from localstorage and display
+
+// function to bring up the array if there is no data in localstorage 
+
+
 
 
