@@ -32,9 +32,6 @@ function colorSchedule() {
 // create an array of task objects in each row and set to local storage
 
 
-// save to localstorage when the saveBtn is clicked 
-
-
 // function to pull the array from localstorage and display
 
 // function to bring up the array if there is no data in localstorage 
@@ -43,5 +40,13 @@ function colorSchedule() {
 
 $(document).ready(function(){
     colorSchedule();
+    // function to call saveBtn to save to localstorage 
+    $(".saveBtn").on("click", function(){
+        workTask = $(this).siblings(".description").val().trim();
+        console.log(workTask);
+        taskHour = $(this).parent().attr("data-hour");
+        console.log(taskHour);
+        localStorage.setItem(taskHour, JSON.stringify(workTask));
+    })
 });
 
